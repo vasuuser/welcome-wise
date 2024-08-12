@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
+import { AuthService } from '../services/auth.service';
 
 @Component({
   selector: 'app-homepage',
@@ -9,8 +10,8 @@ import { Router } from '@angular/router';
 })
 
 export class HomepageComponent implements OnInit {
-
-  constructor(private router: Router) { }
+  isAdminUser: boolean = false;
+  constructor(private router: Router, private authService: AuthService) { }
 
   navigateToCareer() {
     this.router.navigate(['/career']);
@@ -23,6 +24,8 @@ export class HomepageComponent implements OnInit {
   ngOnInit(): void {
     // Optionally, you can add code here to fetch user-specific data
     this.autoSlide();
+    this.isAdminUser = this.authService.isAdmin();
+    console.log(this.isAdminUser); 
   }
 
   autoSlide(): void {

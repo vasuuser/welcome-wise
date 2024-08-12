@@ -4,14 +4,21 @@ const bodyParser = require('body-parser');
 const cors = require('cors'); // Ensure this line is present
 const careerRoutes = require('./routes/career'); // Import the career route
 const jwt = require('jsonwebtoken');
+const cookieParser = require('cookie-parser');
 // const bcrypt = require('bcrypt');
 
 const app = express();
+const corsOptions = {
+  origin: 'http://localhost:4200', // Adjust this to match your frontend URL
+  credentials: true // This is important to allow cookies to be sent
+};
 
 // Middleware
-app.use(bodyParser.json());
-app.use(cors());
+
+app.use(cors(corsOptions));
 app.use(express.json()); // For parsing JSON requests
+app.use(cookieParser());
+app.use(bodyParser.json());
 
 
 // MongoDB Connection
@@ -45,9 +52,8 @@ app.post('/api/login', async (req, res) => {
       console.log('user');
       return res.status(400).send('Invalid credentials');
     } 
-    console.log("isMatch", isMatch);
     const token = jwt.sign({ userId: user._id, role: user.role }, 'your_jwt_secret', { expiresIn: '1h' });
-    console.log("isMatch1", token);
+    res.cookie('userRole', user.role, { maxAge: 3600000 });
     res.status(200).json({ token, role: user.role });
   } 
   catch (error) {
@@ -88,4 +94,4 @@ app.post('/api/updateUser', async (req, res) => {
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
-});
+}); 

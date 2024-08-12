@@ -32,4 +32,14 @@ export class AuthService {
   isLoggedIn(): boolean {
     return localStorage.getItem('isLoggedIn') === 'true';
   }
+
+  private getCookie(name: string): string | null {
+    const match = document.cookie.match(new RegExp('(^| )' + name + '=([^;]+)'));
+    return match ? decodeURIComponent(match[2]) : null;
+  }
+  
+  public isAdmin(): boolean {
+    const userRole = this.getCookie('userRole'); // Replace 'userRole' with the actual cookie name
+    return userRole === 'admin';
+  }
 }

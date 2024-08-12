@@ -97,7 +97,7 @@
   <!-- Other homepage content like carousel, cards, HR section, etc. -->
 
   <!-- Career Page Section -->
-  <div class="career-section">
+  <div class="career-section" *ngIf="isAdminUser">
     <h2>Maintain Candidate profiles</h2>
     <p>Check Potential Candidates</p>
     <button (click)="navigateToCandidateList()">Explore Talent!!</button>
