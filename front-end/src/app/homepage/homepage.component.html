@@ -1,0 +1,116 @@
+<div class="container-fluid">
+  <div class="card-body"></div>
+
+  <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-interval="3000">
+    <ol class="carousel-indicators">
+      <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleIndicators"   data-slide-to="1"></li>
+    <li data-target="#carouselExampleIndicators"   data-slide-to="2"></li>
+    </ol>
+
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img class="d-block w-100" src="assets/klub1.jpeg" alt="First slide">
+          <!-- <h5>Welcome to Our Platform</h5> -->
+          <!-- <p>Explore the amazing features we offer.</p> -->
+      </div>
+
+      <div class="carousel-item">
+        <img class="d-block w-100" src="" alt="Second slide">
+        <div class="carousel-caption d-none d-md-block">
+          <!-- <h5>Seamless Integration</h5>
+          <p>Integrate our services with ease.</p> -->
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img class="d-block w-100" src="" alt="Third slide">
+        <div class="carousel-caption d-none d-md-block">
+          <!--  <h5>Exceptional Support</h5>
+          <p>Get support from our dedicated team.</p> -->
+        </div>
+      </div>
+    </div>
+
+    <a class="carousel-control-prev" role="button">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    </a>
+    
+    <a class="carousel-control-next" role="button">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    </a>
+  </div>
+</div>
+
+<!-- <div class="container mt-5">
+  <div class="row">
+    <div class="col-md-4">
+      <div class="card">
+        <img src="assets/klub.jpeg" class="card-img-top">
+        <div class="card-body">
+          <h5 class="card-title">Klubs</h5>
+          <p class="card-text">Discover our first feature that enhances your experience.</p>
+          <a href="#" class="btn btn-primary">Learn More</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card">
+        <img src="assets/Quizzes.jpeg" class="card-img-top">
+        <div class="card-body">
+          <h5 class="card-title">Quizzes</h5>
+          <p class="card-text">Learn about the second feature that provides value to you.</p>
+          <a href="#" class="btn btn-primary">Learn More</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card">
+        <img src="assets/Competitions.jpeg" class="card-img-top">
+        <div class="card-body">
+          <h5 class="card-title">Competitions</h5>
+          <p class="card-text">Explore the third feature that makes us unique.</p>
+          <a href="#" class="btn btn-primary">Learn More</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> -->
+
+<div class="homepage-container">
+  <!-- Heading for the Cards section -->
+  <h2 class="cards-heading">Feature we offer at Krayonnz</h2>
+  <div class="container mt-5">
+    <div class="row">
+      <div class="col-md-4" *ngFor="let card of featureCards; let i = index">
+        <div class="card mb-4">
+          <img class="card-img-top" [src]="card.imgUrl" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">{{ card.title }}</h5>
+            <p class="card-text">{{ card.description }}</p>
+            <a [href]=[card.link] target="_blank" class="btn btn-primary">Learn More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<div class="homepage">
+  <!-- Other homepage content like carousel, cards, HR section, etc. -->
+
+  <!-- Career Page Section -->
+  <div class="career-section">
+    <h2>Maintain Candidate profiles</h2>
+    <p>Check Potential Candidates</p>
+    <button (click)="navigateToCandidateList()">Explore Talent!!</button>
+  </div>
+</div>
+
+<div class="homepage">
+  <!-- Other homepage content like carousel, cards, HR section, etc. -->
+
+  <!-- Career Page Section -->
+  <div class="career-section">
+    <h2>Careers at Welcome Wise</h2>
+    <p>Join our team and help us build the future. Explore exciting career opportunities with us.</p>
+    <button (click)="navigateToCareer()">Explore Careers</button>
+  </div>
+</div>

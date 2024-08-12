@@ -1,0 +1,37 @@
+.competition-list-container {
+    padding: 20px;
+  }
+  
+  .competition-list {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .competition-item {
+    border: 1px solid #ddd;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+  }
+  
+  .competition-item h3 {
+    margin: 0 0 10px;
+  }
+  
+  .competition-item p {
+    margin: 0 0 5px;
+  }
+  
+  .competition-item button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .competition-item button:hover {
+    background-color: #0056b3;
+  }  

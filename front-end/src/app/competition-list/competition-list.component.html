@@ -1,0 +1,11 @@
+<div class="competition-list-container">
+    <h2>Upcoming Competitions</h2>
+    <ul class="competition-list">
+      <li *ngFor="let competition of competitionList" class="competition-item">
+        <h3>{{ competition.name }}</h3>
+        <p>{{ competition.description }}</p>
+        <p><strong>Date:</strong> {{ competition.date }}</p>
+        <button (click)="registerCompetition(competition)">Register</button>
+      </li>
+    </ul>
+  </div>  

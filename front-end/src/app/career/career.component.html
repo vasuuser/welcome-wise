@@ -1,0 +1,41 @@
+<div class="career-page">
+  <h1>Careers at Welcome Wise</h1>
+  <p>We are always looking for talented and passionate individuals to join our team.</p>
+
+  <div *ngIf="!selectedJob">
+    <!-- List of job openings -->
+    <div class="job-openings">
+      <h3>Current Job Openings</h3>
+      <ul>
+        <li *ngFor="let job of jobOpenings">
+          <h4>{{ job.title }}</h4>
+          <p>{{ job.description }}</p>
+          <button (click)="applyNow(job.title)">Apply Now</button>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div *ngIf="selectedJob">
+    <!-- Job Application Form -->
+    <h3>Apply for {{ selectedJob }}</h3>
+    <form (ngSubmit)="submitApplication(applicationForm)" #applicationForm="ngForm">
+      <label for="name">Full Name:</label>
+      <input type="text" id="name" name="name" ngModel required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" ngModel required>
+
+      <label for="phone">Mobile Number:</label>
+      <input type="text" id="phone" name="phone" ngModel required>
+
+      <label for="dob">Date of Birth:</label>
+      <input type="date" id="dob" name="dob" ngModel required>
+
+      <label for="resume">Upload Resume:</label>
+      <input type="file" id="resume" name="resume" ngModel>
+
+      <button type="submit">Submit Application</button>
+    </form>
+  </div>
+</div>

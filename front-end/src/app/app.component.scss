@@ -1,0 +1,52 @@
+.container {
+    /* margin-top: 20px; */
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0px;
+    padding: 0px;
+  }
+  
+  .navbar {
+    /* margin-bottom: 20px; */
+  }
+  .bg-light {
+    background-color: rgb(160 193 226) !important;
+  }
+  
+  .main-content {
+    /* display: flex; */
+    justify-content: space-between;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+  
+  .home-content {
+    flex: 1;
+    width: 100% !important;
+    /* margin-right: 20px; */
+  }
+  
+  .sidebar {
+    width: 300px;
+    flex-shrink: 0;
+  }
+  
+  .login-container, .signup-container {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: right;
+    margin-bottom: 20px;  /* Added margin to separate login and signup forms */
+  }
+  
+  .login-container .login-box, .signup-container .signup-box {
+    width: 100%;
+  }
+  
+  .login-container h2, .signup-container h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    text-align: right;
+  }
+  

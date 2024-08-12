@@ -1,0 +1,14 @@
+<div class="klub-list-container">
+  <h2>Join Klub</h2>
+  <ul class="klub-list">
+    <li *ngFor="let klub of klubList" class="klub-item">
+      <h3>{{ klub.name }}</h3>
+      <p>{{ klub.description }}</p>
+      <button (click)="joinKlub(klub)">Join</button>
+    </li>
+  </ul>
+
+  <div *ngIf="successMessage" class="success-message">
+    {{ successMessage }}
+  </div>
+</div>

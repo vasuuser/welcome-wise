@@ -1,0 +1,81 @@
+.tabs {
+  display: flex;
+  background-color: #f1f1f1;
+  border-bottom: 1px solid #ddd;
+}
+
+.tabs ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+.tabs li {
+  padding: 10px 20px;
+  cursor: pointer;
+  background-color: #ddd;
+  border-right: 1px solid #ccc;
+  transition: background-color 0.3s;
+}
+
+.tabs li:hover,
+.tabs li.active {
+  background-color: #ccc;
+}
+
+.tab-content {
+  padding: 20px;
+}
+
+.tab-pane {
+  display: none;
+}
+
+.tab-pane.ngIf {
+  display: block;
+}
+
+.klub-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.klub-item {
+  border: 1px solid #ddd;
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+.klub-item h3 {
+  margin: 0 0 10px;
+}
+
+.klub-item p {
+  margin: 0 0 15px;
+}
+
+.klub-item button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.klub-item button:hover {
+  background-color: #0056b3;
+}
+
+.success-message {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+  border-radius: 5px;
+}

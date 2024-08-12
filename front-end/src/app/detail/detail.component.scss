@@ -1,0 +1,89 @@
+// Variables
+$primary-color: #007bff;
+$background-color: #f8f9fa;
+$text-color: #343a40;
+$card-bg-color: #ffffff;
+$card-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+// Main Container
+.container {
+  padding: 20px;
+  background-color: $background-color;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// Card Style
+.card {
+  background-color: $card-bg-color;
+  border-radius: 8px;
+  box-shadow: $card-shadow;
+  max-width: 600px;
+  width: 100%;
+  padding: 20px;
+  text-align: center;
+
+  // Title
+  h2 {
+    color: $primary-color;
+    margin-bottom: 20px;
+    font-size: 2rem;
+    font-weight: bold;
+  }
+
+  // Text
+  p {
+    color: $text-color;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+
+  // Button
+  .btn-primary {
+    background-color: $primary-color;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: darken($primary-color, 10%);
+    }
+  }
+}
+
+// Image Styling
+.card-img-top {
+  max-height: 300px;
+  object-fit: cover;
+  border-radius: 8px 8px 0 0;
+}
+
+// Responsive Design
+@media (max-width: 768px) {
+  .container {
+    padding: 10px;
+  }
+
+  .card {
+    padding: 15px;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+
+  .btn-primary {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+  }
+}

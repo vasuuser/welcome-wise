@@ -1,0 +1,151 @@
+.hr-section {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  margin-top: 30px;
+
+  h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+
+  p {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+
+  button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #0056b3;
+    }
+  }
+}
+
+/* Homepage styles */
+.container-fluid {
+  padding: 0;
+}
+
+/* Carousel */
+.carousel-inner img {
+  height: 600px;
+  object-fit: cover;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: rgb(0, 0, 0);
+} 
+
+ Cards 
+.card {
+  margin-top: 20px;
+} 
+
+  .card img {
+  height: 200px;
+  object-fit: cover;
+}
+
+Career Section 
+.career-section {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+ .career-section h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+} 
+
+ .job-listings .job {
+  border-bottom: 1px solid #ddd;
+  padding: 15px 0;
+} 
+
+ .job-listings .job:last-child {
+  border-bottom: none;
+} 
+
+ .job-listings .job h5 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+ .job-listings .job p {
+  margin: 0;
+  font-size: 1rem;
+} 
+
+// Background Image for the Homepage
+body {
+  background: url('../../assets/homepage.jpeg');
+  background-size: cover;
+}
+
+/* Rotate images inside carousel */
+.rotating {
+  animation: rotate 10s linear infinite;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.cards-heading {
+  text-align: 1rem;
+  font-size: 2em;
+  margin-top: 20px;
+  color: #333; /* Adjust the color as needed */
+}
+
+.career-section {
+  background-color: #e8f4f8;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  margin-top: 30px;
+
+  h2 {
+    font-size: 24px;
+    color: #0056b3;
+    margin-bottom: 10px;
+  }
+
+  p {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 20px;
+  }
+
+  button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #0056b3;
+    }
+  }
+}

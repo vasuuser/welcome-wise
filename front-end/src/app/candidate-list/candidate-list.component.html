@@ -1,0 +1,29 @@
+<div class="container">
+    <h2>Candidate Profiles</h2>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Mobile Number</th>
+          <th>DOB</th>
+          <th>Position Applied</th>
+          <th>Status</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let candidate of candidates">
+          <td>{{ candidate.fullName }}</td>
+          <td>{{ candidate.email }}</td>
+          <td>{{ candidate.mobileNumber }}</td>
+          <td>{{ candidate.dob | date }}</td>
+          <td>{{ candidate.positionApplied }}</td>
+          <td>{{ candidate.applicationStatus }}</td>
+          <td>
+            <button class="btn btn-primary" (click)="viewDetails(candidate)">View</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>  

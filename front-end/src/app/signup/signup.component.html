@@ -1,0 +1,30 @@
+<div class="signup-container">
+  <div class="signup-box">
+    <h2>Create Your Account</h2>
+    <p>Fill in the details below to sign up for the employee portal.</p>
+    <form (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="fullName">Full Name</label>
+        <input type="text" id="fullName" name="fullName" [(ngModel)]="fullName" class="form-control" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" [(ngModel)]="email" class="form-control" required>
+      </div>
+      <div class="form-group">
+        <label for="mobileNumber">Mobile Number</label>
+        <input type="text" id="mobileNumber" name="mobileNumber" [(ngModel)]="mobileNumber" class="form-control" required>
+      </div>
+      <div class="form-group">
+        <label for="dob">Date of Birth</label>
+        <input type="date" id="dob" name="dob" [(ngModel)]="dob" class="form-control" required>
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" [(ngModel)]="password" class="form-control" required>
+      </div>
+      <button type="submit" class="btn btn-primary btn-block">Sign Up</button>
+    </form>
+    <p class="login-link">Already have an account? <a routerLink="/login">Login</a></p>
+  </div>
+</div>
